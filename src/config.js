@@ -10,8 +10,8 @@ export const CONFIG = {
   SUPPORTED_LANGUAGES: ['te', 'en', 'hi'],
   
   // Configurable permanent destination URL for QR codes.
-  // Never points to localhost. Can be updated dynamically via Owner Dashboard.
-  DEFAULT_DESTINATION_URL: 'https://mindverse.app',
+  // Verified live production destination on GitHub Pages.
+  DEFAULT_DESTINATION_URL: 'https://naveenk7100-ship-it.github.io/MINDVERSE/',
   
   // Storage keys
   STORAGE_KEYS: {

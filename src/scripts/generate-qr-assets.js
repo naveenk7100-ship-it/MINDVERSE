@@ -8,7 +8,7 @@ import path from 'path';
 import QRCode from 'qrcode';
 import { jsPDF } from 'jspdf';
 
-const DESTINATION_URL = process.argv[2] || 'https://mindverse.app';
+const DESTINATION_URL = process.argv[2] || 'https://naveenk7100-ship-it.github.io/MINDVERSE/';
 const OUT_DIR = path.resolve('qr-codes');
 
 if (!fs.existsSync(OUT_DIR)) {
