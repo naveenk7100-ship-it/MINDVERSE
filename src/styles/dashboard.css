@@ -1,0 +1,169 @@
+/**
+ * MINDVERSE Private Owner Dashboard & Analytics Styles
+ */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.auth-card {
+  padding: 30px 24px;
+  text-align: center;
+}
+
+.pin-input-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.pin-digit-input {
+  width: 52px;
+  height: 60px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-card);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pin-digit-input:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 420px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.metric-card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metric-header {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.metric-value {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.metric-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* QR Code Section */
+.qr-preview-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.qr-canvas-wrapper {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  margin: 16px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-url-box {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.url-input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--text-main);
+  font-family: monospace;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.url-input:focus {
+  border-color: var(--accent-cyan);
+}
+
+.qr-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .qr-action-buttons {
+    flex-direction: row;
+  }
+  .qr-action-buttons button {
+    flex: 1;
+  }
+}
+
+/* Game Breakdown Bars */
+.breakdown-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.breakdown-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+}
+
+.breakdown-bar-bg {
+  width: 100%;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.breakdown-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+}

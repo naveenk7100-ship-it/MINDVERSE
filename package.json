@@ -1,0 +1,19 @@
+{
+  "name": "mindverse",
+  "version": "1.0.0",
+  "description": "MINDVERSE — Mobile-first Web App + PWA Arcade: Enter. Observe. Think. Play.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate-qr": "node src/scripts/generate-qr-assets.js"
+  },
+  "dependencies": {
+    "jspdf": "^2.5.2",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

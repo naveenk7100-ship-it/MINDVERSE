@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>MINDVERSE — Enter. Observe. Think. Play.</title>
+  
+  <meta name="description" content="MINDVERSE: QR-accessible offline-first brain and knowledge arcade with 5 cognitive arenas in Telugu, English and Hindi." />
+  <meta name="theme-color" content="#0d111e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="MINDVERSE" />
+  
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="apple-touch-icon" href="./icon-192.png" />
+  
+  <link rel="stylesheet" href="./src/styles/main.css" />
+  <link rel="stylesheet" href="./src/styles/games.css" />
+  <link rel="stylesheet" href="./src/styles/dashboard.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Top Sticky Header -->
+    <header class="app-header">
+      <div class="brand-wrapper" id="brand-home-btn">
+        <img src="./favicon.svg" alt="MINDVERSE" class="brand-logo" />
+        <span class="brand-title text-gradient-cyan">MINDVERSE</span>
+      </div>
+
+      <div class="header-controls">
+        <div class="status-badge" id="connectivity-badge" title="Connection status">
+          <span class="status-dot online" id="status-dot"></span>
+          <span id="status-text">Online</span>
+        </div>
+
+        <button class="icon-btn" id="sound-toggle-btn" title="Toggle Sound FX" aria-label="Toggle Sound">
+          <span id="sound-icon">🔊</span>
+        </button>
+
+        <button class="icon-btn" id="lang-btn" title="Change Language" aria-label="Change Language">
+          🌐
+        </button>
+      </div>
+    </header>
+
+    <!-- Offline Notification Banner -->
+    <div id="offline-banner" class="offline-banner" style="display: none;">
+      ⚠️ <span id="offline-banner-text">Playing offline. Your progress is saved locally.</span>
+    </div>
+
+    <!-- Main Dynamic Screen Viewport -->
+    <main id="main-container" class="main-content">
+      <!-- Screens dynamically mounted here -->
+    </main>
+
+    <!-- Bottom Mobile Navigation Bar -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-screen="welcome">
+        <span class="nav-icon">✨</span>
+        <span class="nav-label" data-i18n="nav.home">Home</span>
+      </button>
+      <button class="nav-item" data-screen="game-select">
+        <span class="nav-icon">🎮</span>
+        <span class="nav-label" data-i18n="nav.games">Games</span>
+      </button>
+      <button class="nav-item" data-screen="progress">
+        <span class="nav-icon">🏆</span>
+        <span class="nav-label" data-i18n="nav.progress">Progress</span>
+      </button>
+    </nav>
+
+    <!-- Global Floating Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Global Modal Dialog Overlay -->
+    <div id="modal-container" style="display: none;"></div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

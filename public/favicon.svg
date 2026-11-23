@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c16" />
+      <stop offset="50%" stop-color="#0e1322" />
+      <stop offset="100%" stop-color="#05070c" />
+    </linearGradient>
+    <linearGradient id="cyberNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)" />
+  <rect width="504" height="504" x="4" y="4" rx="106" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+
+  <!-- Outer Hexagon Ring -->
+  <polygon points="256,48 436,152 436,360 256,464 76,360 76,152" fill="none" stroke="url(#cyberNeon)" stroke-width="6" opacity="0.4" />
+  
+  <!-- Neural Radiance Nodes -->
+  <circle cx="256" cy="48" r="8" fill="#38bdf8" filter="url(#glow)" />
+  <circle cx="436" cy="152" r="8" fill="#818cf8" filter="url(#glow)" />
+  <circle cx="436" cy="360" r="8" fill="#c084fc" filter="url(#glow)" />
+  <circle cx="256" cy="464" r="8" fill="#38bdf8" filter="url(#glow)" />
+  <circle cx="76" cy="360" r="8" fill="#818cf8" filter="url(#glow)" />
+  <circle cx="76" cy="152" r="8" fill="#c084fc" filter="url(#glow)" />
+
+  <!-- Inner Geometric Brain Core / Stylized 'M' Emblem -->
+  <g filter="url(#glow)">
+    <!-- Stylized M facets -->
+    <path d="M 148 350 L 148 180 L 256 280 L 364 180 L 364 350" fill="none" stroke="url(#cyberNeon)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Neural Diamond Core -->
+    <polygon points="256,150 286,190 256,230 226,190" fill="url(#goldAccent)" />
+    <!-- Center Eye of Mind -->
+    <circle cx="256" cy="190" r="6" fill="#ffffff" />
+  </g>
+
+  <!-- Subtle grid lines -->
+  <line x1="148" y1="350" x2="256" y2="420" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+  <line x1="364" y1="350" x2="256" y2="420" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+</svg>
